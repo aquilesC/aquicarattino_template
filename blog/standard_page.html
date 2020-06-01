@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>{% block title %}{% block title_prefix %}Aquiles Carattino | {% endblock %}{% if self.seo_title %}
+    {{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}</title>
+
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100 max-w-screen-lg mx-auto">
+<div id="header" class="pt-6">
+  <h1 class="font-head font-bold text-4xl">Aquiles Carattino</h1>
+</div>
+<main class="flex flex-col mx-auto mb-20">
+  {{ page.body }}
+</main>
+<div id="mobile_menu" class="fixed inset-x-0 bottom-0 lg:hidden block">
+  Menu
+</div>
+</body>
+</html>

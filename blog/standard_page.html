@@ -1,3 +1,4 @@
+{% load menu_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,20 +10,22 @@
   <title>{% block title %}{% block title_prefix %}Aquiles Carattino | {% endblock %}{% if self.seo_title %}
     {{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}</title>
 
-
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
 
 </head>
 <body class="bg-gray-100 max-w-screen-lg mx-auto">
-<div id="header" class="pt-6">
-  <h1 class="font-head font-bold text-4xl">Aquiles Carattino</h1>
-</div>
-<main class="flex flex-col mx-auto mb-20">
-  {{ page.body }}
+<nav class="mt-0 md:mt-5 py-3 bg-white shadow-lg md:flex rounded-b-lg">
+  <div class="pl-4"><h1 class="font-head font-bold text-2xl">Aquiles Carattino</h1></div>
+  <div class="pl-6 mt-2 md:ml-auto font-sans">
+    <a class="uppercase hover:text-blue-500 border-transparent hover:border-blue-500 border-b-2 tracking-wide font-bold text-xs py-3 mr-8"
+       href="/blog">Blog</a>
+    <a class="uppercase hover:text-blue-500 border-transparent hover:border-blue-500 border-b-2 tracking-wide font-bold text-xs py-3 mr-8"
+       href="/about">About</a></div>
+</nav>
+<main class="flex flex-col mx-auto mb-20 pt-10 lg:pt-24 px-5">
+  <div class="md:ml-10 font-serif text-gray-800 text-4xl font-extrabold">{{ page.title }}</div>
+  <div class="mt-5">{{ page.body }}</div>
 </main>
-<div id="mobile_menu" class="fixed inset-x-0 bottom-0 lg:hidden block">
-  Menu
-</div>
 </body>
 </html>

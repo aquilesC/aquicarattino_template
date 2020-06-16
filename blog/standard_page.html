@@ -12,20 +12,25 @@
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
-
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
-<body class="bg-gray-100 max-w-screen-lg mx-auto">
-<nav class="mt-0 md:mt-5 py-3 bg-white shadow-lg md:flex rounded-b-lg">
-  <div class="pl-4"><h1 class="font-head font-bold text-2xl">Aquiles Carattino</h1></div>
-  <div class="pl-6 mt-2 md:ml-auto font-sans">
-    <a class="uppercase hover:text-blue-500 border-transparent hover:border-blue-500 border-b-2 tracking-wide font-bold text-xs py-3 mr-8"
-       href="/blog">Blog</a>
-    <a class="uppercase hover:text-blue-500 border-transparent hover:border-blue-500 border-b-2 tracking-wide font-bold text-xs py-3 mr-8"
-       href="/about">About</a></div>
-</nav>
-<main class="flex flex-col mx-auto mb-20 pt-10 lg:pt-24 px-5">
-  <div class="md:ml-10 font-serif text-gray-800 text-4xl font-extrabold">{{ page.title }}</div>
-  <div class="mt-5">{{ page.body }}</div>
-</main>
+<body class="bg-white max-w-screen-lg mx-auto text-black">
+<div id="app">
+  <nav class="mt-0 md:mt-5 py-3 bg-white shadow-lg md:flex rounded-b-lg">
+    <div class="pl-4 flex items-center">
+      <img class="w-10 h-10 md:h-12 md:w-12 lg:h-20 lg:w-20 rounded-full" src="{% static 'img/aquiles.jpg' %}">
+      <h1 class="font-head font-bold text-2xl">Aquiles Carattino</h1>
+    </div>
+    <div class="pl-6 mt-2 md:ml-auto font-sans flex content-center">
+      <a class="uppercase hover:text-blue-500 border-transparent hover:border-blue-500 border-b-2 tracking-wide font-bold text-xs py-3 mr-8"
+         href="/blog">Blog</a>
+      <a class="uppercase hover:text-blue-500 border-transparent hover:border-blue-500 border-b-2 tracking-wide font-bold text-xs py-3 mr-8"
+         href="/about">About</a></div>
+  </nav>
+  <main class="flex flex-col mx-auto mb-20 pt-10 lg:pt-24 px-5">
+    <div class="md:ml-10 font-serif text-gray-800 text-4xl font-extrabold">{{ page.title }}</div>
+    <div class="mt-5">{{ page.body }}</div>
+  </main>
+</div>
 </body>
 </html>

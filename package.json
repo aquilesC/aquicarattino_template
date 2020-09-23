@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "autoprefixer": "^9.8.0",
-    "postcss": "^7.0.31",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6"
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.34",
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.8"
   },
   "devDependencies": {},
   "scripts": {

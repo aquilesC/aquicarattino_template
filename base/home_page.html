@@ -1,4 +1,4 @@
-{% load menu_tags %}
+{% load menu_tags wagtailcore_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +13,13 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
 </head>
-<body class="h-24 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 max-w-screen-lg mx-auto text-black">
+<body class="h-24 max-w-screen-lg mx-auto text-black">
 <main class="flex flex-col mx-auto mb-20 pt-10 lg:pt-24 px-5">
-  <div class="h-24 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">Scientists, Entrepreneur</div>
-  <div class="md:ml-10 font-serif text-gray-800 text-4xl font-extrabold">{{ page.title }}</div>
-  <div class="mt-5">{{ page.body }}</div>
+  <div class="text-sm font-sans font-semibold uppercase text-teal-500">Scientists, Entrepreneur</div>
+  <div class="font-serif text-gray-800 text-4xl font-extrabold">{{ page.title }}</div>
+  <div class="mt-5">{{ page.body|richtext }}</div>
+  <div class="text-2xl text-2xl">{{ page.section_title }}</div>
+  <div class="m-2">{{ page.important_articles }}</div>
 </main>
 </body>
 </html>
